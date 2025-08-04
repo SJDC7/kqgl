@@ -16,6 +16,7 @@ pip install --upgrade pip
 
 # 安装依赖
 pip install -r requirements.txt  
+cd testcases
 
 # 运行测试脚本
 python test_login.py  
