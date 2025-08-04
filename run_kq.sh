@@ -1,15 +1,14 @@
-echo 开始运行自动化考勤脚本
+#!/bin/bash
 
-cd /d D:\auto_test
+echo "开始运行自动化考勤脚本"
 
-:: 创建虚拟环境（可选）
+# 激活虚拟环境（如果有的话，路径示例）
+source venv/bin/activate
 
-call venv\Scripts\activate
+# 安装依赖（如果需要）
+# pip install -r requirements.txt
 
-:: 安装依赖
-:: pip install -r requirements.txt
+# 执行自动化测试
+python3 test_login.py
 
-:: 执行自动化测试（如 Selenium 脚本）
-python test_login.py
-
-echo 自动化脚本执行完毕
+echo "自动化脚本执行完毕"
