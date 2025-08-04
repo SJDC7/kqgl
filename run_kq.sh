@@ -8,11 +8,16 @@ rm -rf venv
 # 创建新的 Linux 虚拟环境
 python3 -m venv venv  
 
-# 激活并安装依赖
+# 激活虚拟环境
 . venv/bin/activate  
+
+# 升级pip，避免旧版本pip安装失败
+pip install --upgrade pip
+
+# 安装依赖
 pip install -r requirements.txt  
 
-# 运行测试
+# 运行测试脚本
 python test_login.py  
 
 echo "自动化脚本执行完毕"
