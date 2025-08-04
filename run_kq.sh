@@ -1,24 +1,27 @@
 #!/bin/sh
+set -e  # 遇错立刻退出
 
 echo "开始运行自动化考勤脚本"
 
-# 删除旧的虚拟环境（如果有）
-rm -rf venv  
+rm -rf venv
+python3 -m venv venv
 
-# 创建新的 Linux 虚拟环境
-python3 -m venv venv  
+. venv/bin/activate
 
-# 激活虚拟环境
-. venv/bin/activate  
+echo "Python 版本："
+python --version
 
-# 升级pip，避免旧版本pip安装失败
+echo "pip 版本："
+pip --version
+
 pip install --upgrade pip
+pip install -r requirements.txt
 
-# 安装依赖
-pip install -r requirements.txt  
+echo "已安装库列表："
+pip list
+
 cd testcases
 
-# 运行测试脚本
-python test_login.py  
+python test_login.py
 
 echo "自动化脚本执行完毕"
