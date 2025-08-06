@@ -18,7 +18,7 @@ def get_project_path():
     # project_name = ("CwaTool\CwaTool")
     # file_path = os.path.dirname(__file__)
     # return file_path[:file_path.find(project_name) + len(project_name)]
-    return os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    return os.environ.get('WORKSPACE', os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 def sep(path, add_sep_before=False, add_sep_after=False):
@@ -74,5 +74,3 @@ def readfile(folder_path,excel_file_name):
 
 if __name__ == '__main__':
     print("项目根目录：", get_project_path())
-
-    readfile(r"D:\Elitel\9_考勤统计\202505月考勤\考勤明细",r"D:\Elitel\9_考勤统计\202505月考勤")
