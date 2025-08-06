@@ -49,7 +49,7 @@ class DriverConfig:
 
             # 配置浏览器首选项
             prefs = DriverConfig._configure_preferences()
-            options.add_experimental_option("prefs", prefs)
+            # options.add_experimental_option("prefs", prefs)
 
             # 允许访问不安全的本地主机
             options.add_argument("--allow-insecure-localhost")
