@@ -1,5 +1,5 @@
+import getpass
 import logging
-import os
 import tempfile
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -14,7 +14,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-print("当前用户：", os.getlogin())
+print("当前用户：", getpass.getuser())
 class DriverConfig:
     """
     用于配置 WebDriver 实例的实用方法
