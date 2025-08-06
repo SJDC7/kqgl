@@ -39,8 +39,9 @@ class DriverConfig:
             # 创建 ChromeOptions 对象，用于配置 Chrome 浏览器选项
             options = Options()
             
-            # user_data_dir = tempfile.mkdtemp()
-            # options.add_argument(f"--user-data-dir={user_data_dir}")
+            user_data_dir = tempfile.mkdtemp()
+            print("User data dir:", user_data_dir)
+            options.add_argument(f"--user-data-dir={user_data_dir}")
 
             # 设置浏览器窗口大小
             options.add_argument("window-size=1920,1080")
