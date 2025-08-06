@@ -32,7 +32,6 @@ class DriverConfig:
 
     @staticmethod
     def driver_config():
-        logging.basicConfig(level=logging.INFO)
         logging.info("正在初始化WebDriver配置...")
 
         try:
