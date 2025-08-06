@@ -13,6 +13,7 @@ class Getconf:
             # 构建配置文件路径
             config_path = os.path.join(get_project_path(), "config", "environment.yaml")
             
+            
             # 打开并加载 YAML 文件
             with open(config_path, encoding="utf-8") as file:
                 self.env = yaml.load(file, Loader=yaml.FullLoader)
@@ -74,6 +75,7 @@ if __name__ == '__main__':
         print("查询时间:", config.get_select_data())
         print("保存路径:", config.get_save_path())
         print("重命名规则:", config.get_rename())
+
     except Exception as e:
         print(f"测试失败: {e}")
         
