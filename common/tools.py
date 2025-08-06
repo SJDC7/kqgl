@@ -73,4 +73,6 @@ def readfile(folder_path,excel_file_name):
 
 
 if __name__ == '__main__':
+    print("项目根目录：", get_project_path())
+
     readfile(r"D:\Elitel\9_考勤统计\202505月考勤\考勤明细",r"D:\Elitel\9_考勤统计\202505月考勤")
