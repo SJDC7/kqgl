@@ -17,9 +17,6 @@ pip --version
 pip install --upgrade pip
 pip install -r requirements.txt
 
-echo "已安装库列表："
-pip list
-
 cd testcases
 
 python test_login.py
