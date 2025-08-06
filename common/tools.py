@@ -15,9 +15,10 @@ def get_project_path():
     获取项目绝对路径
     :return:
     """
-    project_name = ("CwaTool\CwaTool")
-    file_path = os.path.dirname(__file__)
-    return file_path[:file_path.find(project_name) + len(project_name)]
+    # project_name = ("CwaTool\CwaTool")
+    # file_path = os.path.dirname(__file__)
+    # return file_path[:file_path.find(project_name) + len(project_name)]
+    return os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 
 def sep(path, add_sep_before=False, add_sep_after=False):
