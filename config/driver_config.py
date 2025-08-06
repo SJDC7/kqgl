@@ -40,7 +40,7 @@ class DriverConfig:
             options = Options()
             
             user_data_dir = tempfile.mkdtemp()
-            options.add_argument(f"--user-data-dir={tempfile.mkdtemp()}")
+            options.add_argument(f"--user-data-dir={user_data_dir}")
 
             # 设置浏览器窗口大小
             options.add_argument("window-size=1920,1080")
